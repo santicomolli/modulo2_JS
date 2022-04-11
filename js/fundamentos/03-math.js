@@ -68,8 +68,6 @@ Tarea 1
 - Elevarlo a la quinta potencia y mostrar en consola el resultado
 
 
-
-
 Tarea 2
 --------
 
