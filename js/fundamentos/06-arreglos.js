@@ -50,8 +50,8 @@ for (const alumno of alumnos)
 
 
 //agregrar un elemento al arreglo
+alumnos.unshift("Nadia") //agefga al principio
 alumnos.push("Daniel", "Roberto")//agrega al final
-alumnos.unshift("Nadia") //agrefga al principio
 
 
 //Saber si un elemento existe en un arreglo
