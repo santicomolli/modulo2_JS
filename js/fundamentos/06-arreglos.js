@@ -42,6 +42,7 @@ for (let i = 0; i < alumnos.length; i++)
 {
     console.log(`Hola soy ${alumnos[i]}`)
 }
+
 //for of
 for (const alumno of alumnos) 
 {
@@ -93,6 +94,7 @@ let comision = alumnos.concat(alumnas)
 
 //ordenar arrelgto de la A-Z
 console.log(comision.sort())
+
 //Lo q hace el reverse es dar vuelta las posiciones todo el array
 console.log(comision.reverse())
 
