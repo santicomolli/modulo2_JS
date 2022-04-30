@@ -1,39 +1,28 @@
-/* Ejercicio con arreglo de objetos:
+//Usuario modelo
 
+//class es una palabra reservada, el nombre de la clase primera letra en mayuscula en singular y se abre llave
+class Usuario {
 
-- Generar un arreglo de películas (3), donde cada película deberá contener las propiedades (título, género, año, sinopsis). 
+    //dentro la funcion constructora
+    //luego se pone el constructor, dentro de los parentisis se ponen los valores que queremnos que el usuario ingrese a la clase
+    constructor(nombre, username, password, estado=true){
 
-- Crear una función que recorra toda las películas imprimiendo la información de las películas por pantalla (incluir un título que diga **CARTELERA**). */
-
-let peliculas = [
-    {
-        titulo: "IronMan",
-        genero: "Accion",
-        año: "2008",
-        sinopsis: "Anthony Stark, un multimillonario industrial y genio inventor, que es secuestrado y obligado a construir un arma devastadora. En su lugar, utilizando su inteligencia e ingenio, Anthony construye una armadura de alta tecnología y escapa de su cautiverio."
-    },
-    {
-        titulo: "Transformers",
-        genero: "Ciencia Ficcion",
-        año: "2007",
-        sinopsis: "Dos razas de robots extraterrestres están en guerra. Mientras que los autobots creen en la tolerancia, los decepticons desean exterminar la vida biológica. Cuando la batalla llega hasta la Tierra, el humano Sam Witwicky empezará su particular lucha."
-    },
-    {
-        titulo: "Annabelle",
-        genero: "Terror",
-        año: "2014",
-        sinopsis: "Ed y Lorraine Warren tratan de encerrar bajo llave a Annabelle, una muñeca poseída. Como demonólogos la colocaran en una vitrina bendecida como medida de seguridad, sin embargo, una noche terrorífica Annabelle despertará a otros espíritus malignos que se encuentran en la habitación y que tendrán una nueva fijación"
+        //dentro del constructor creo las propiedades que va a tener ese objeto con los valores
+        //uso la palabra reservada This, haciendo referiencia a ese obejto a crear
+        this.nombre = nombre,
+        this.username = username,
+        this.password = password,
+        this.estado = estado
     }
-]
 
-function presentarPelis()
-{
-    peliculas.forEach(function(peli)
-    {
-        document.write(`---------CARTELERA---------<br/>`)
-        document.write(`<b>Nombre</b>: ${peli.titulo} <br/>`)
-        document.write(`<b>Genero</b>: ${peli.genero} <br/>`)
-        document.write(`<b>Año</b>: ${peli.año} <br/>`)
-        document.write(`<b>Sinopsis</b>: ${peli.sinopsis} <br/><br/>`)
-    })
+    //y luego para crear una funcion o metodo se lo hace poniendo el nombre y su estructura como otra funcion normal
+    //no olvidarme tambien del This para saber a que obejto hago referencia
+    presentacion(){
+        console.log("-----Tarjeta de presentacion-----")
+        console.log(`Nombre: ${this.nombre}`)
+        console.log(`Nombre: ${this.username}`)
+    }
 }
+
+let user1 = new Usuario("Santi", "Santic", "12345")
+let user2 = new Usuario("Josefina", "Jo", "54321")
