@@ -1,33 +1,42 @@
-// /* BOM
-// -----
+/* Crea una web con bootstrap y js, que contenga un botón comenzar el juego, en ese momento se crea un número aleatorio que el usuario deberá adivinar.
+    La interfaz del usuario debe tener además un input para ingresar un número y un botón enviar, al presionar el botón enviar mostrar en un alert si el usuario adivino o no el número mágico, si no lo adivino indicarle con un alert si el numero que ingreso es mayor o menor al número mágico.
+    Cuando el usuario adivine el numero mostrar un mensaje indicando al usuario que adivino el numero. */
 
-// - Crear un script que luego de 3 segundos muestre en el navegador la fecha del día.
 
-function fechaPc(){
+let numRandom = 0
 
-    setTimeout(function(){
-        document.write(`${new Date().getDate()} : ${new Date().getMonth()} : ${new Date().getFullYear()}`)
-    }, 3000)
+function random(){
+
+    document.getElementById("btn-Start")
+    numRandom = Math.round(Math.random() * 20)
+
 }
 
-// - Con 30 minutos de bicicleta puedes quemar 192 calorías. Crear un script que muestre en consola las calorías que vas quemando por segundo simulando que vas en bicicleta.
+let numJugador = 0
 
-//30 min son 1800 segundos
-//1800 segundos son 1800000 milisegundos
-//x segundo se van quemando 0,106 calorias -/- 0,106 * 1800 segundos(30 min) = 192 calorias
+function guardarNum(e){
 
-function calorias(){
+    numJugador = e.target.value
 
-    let calorias = 0.106
+}
+
+document.getElementById("numJugador").addEventListener("change", guardarNum)
+
+
+function control(){
     
-    calcular = setInterval(function(){
-        console.log(`Las calorias quemadas por segundo son: ${calorias}.`)
-    }, 1000)
+    if (numJugador == numRandom) 
+    {
+        alert("El numero ingresado es IGUAl al numero magico!!! GANASTE")
+    }
+    else if(numJugador > numRandom)
+    {
+        alert("El numero ingresado es MAYOR al numero magico")
+    }
+    else{
+        alert("El numero ingresado es MENOR al numero magico")
+    }
 }
 
+document.getElementById("btn-Enviar").addEventListener("click", control)
 
-// - Crear el script que detendrá el script anterior cuando dejes de andar en bicicleta */
-
-const detenerCuenta = function(){
-    clearInterval(calorias)
-}
