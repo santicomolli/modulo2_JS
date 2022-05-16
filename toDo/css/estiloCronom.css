@@ -1,0 +1,23 @@
+*{
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin-top: 16rem;
+    background: linear-gradient(to right, #3c3d3d 0%, #65696b 50%, #7f8b8b 100%);
+}
+
+
+.cronometro{
+    width: 400px;
+    background: linear-gradient(to right, #6b3b8d, #946eaf);
+    color: #ffffff;
+    font-size: 60px;
+    text-align: center;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 10px;
+    user-select: none;
+}

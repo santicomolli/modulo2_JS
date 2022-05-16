@@ -51,7 +51,7 @@ for (const alumno of alumnos)
 
 
 //agregrar un elemento al arreglo
-alumnos.unshift("Nadia") //agefga al principio
+alumnos.unshift("Nadia") //agrega al principio
 alumnos.push("Daniel", "Roberto")//agrega al final
 
 
