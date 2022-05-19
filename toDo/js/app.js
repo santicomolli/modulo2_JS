@@ -23,12 +23,10 @@ const agregarTarjeta = function () {
     let tarjeta = document.createElement("div");
     tarjeta.classList = "card mb-1";
 
-    let contenidoTarjeta = `<div
-    class="card-body d-flex justify-content-between align-items-center"
-  >
-    <span>📌 ${tarea}</span>
-    <button class="btn btn-danger btn-sm" onclick="borrarTarea(${index})">x</button>
-  </div>`;
+    let contenidoTarjeta = `<div class="card-body d-flex justify-content-between align-items-center">
+                              <span>📌 ${tarea}</span>
+                              <button class="btn btn-danger btn-sm" onclick="borrarTarea(${index})">x</button>
+                            </div>`;
 
     tarjeta.innerHTML = contenidoTarjeta;
 
